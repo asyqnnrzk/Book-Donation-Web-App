@@ -16,7 +16,7 @@
                     <li><a href="{{ url('register') }}">Register</a></li>
                 </ul>
             </div>
-        </div>2 
+        </div>
     </header>
     <main>
         <div class="content">
