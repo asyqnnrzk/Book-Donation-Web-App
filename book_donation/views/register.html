@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <form name="userRegister" onsubmit="return validateRegister(event);">
+        <form id="userRegister" onsubmit="return handleFormSubmit();">
             <h1>Create an account</h1>
 
             <div class="input-box">
@@ -28,7 +28,7 @@
                 <input id="email" type="email" placeholder="Email">
             </div>
 
-            <button id="button" type="submit" class="btn">
+            <button id="submit" type="submit" class="btn">
                 SIGN ME UP!
             </button>
 
