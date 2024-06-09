@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Page</title>
-    <link rel="stylesheet" href="{{ url('css/home_style.css') }}">
+    <link rel="stylesheet" href="../css/home_style.css">
 </head>
 <body>
     <header>
         <div class="banner">
             <div class="navbar">
-                <img src="{{ url('img/logo_trans.png') }}" class="logo" alt="Logo">
+                <img src="../img/logo_trans.png" class="logo" alt="Logo">
                 <ul>
-                    <li><a href="{{ url('login') }}">Login</a></li>
-                    <li><a href="{{ url('register') }}">Register</a></li>
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
                 </ul>
             </div>
         </div>
@@ -23,14 +24,14 @@
             <h1>Welcome Admin</h1>
             <p>Let's get to business!</p>
             <div>
-                <a href="{{ route('donated.book') }}">
+                <a href="#" class="button-link">
                     <button type="button">BOOKS DONATED</button>
                 </a>
-                <a href="{{ route('purchased.book') }}">
+                <a href="#" class="button-link">
                     <button type="button">BOOKS PURCHASED</button>
                 </a>
             </div>
-        </div>
+        </div>        
     </main>
 </body>
 </html>

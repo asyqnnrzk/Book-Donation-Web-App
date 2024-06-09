@@ -127,3 +127,10 @@ button:hover {
 .active-slide {
   display: block;
 }
+
+.button-link {
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 10px;
+}
+
