@@ -63,9 +63,8 @@ function handleFormSubmit(event) {
         isValid = validateLogin();
         if (isValid) {
             alert("Logged in successfully!");
-            // Here you can handle further actions like redirecting to a dashboard or homepage
             setTimeout(function() {
-                window.location.href = 'dashboard.html'; // Example redirection after login
+                window.location.href = 'admin_page.html';
             }, 1000);
         }
     }
