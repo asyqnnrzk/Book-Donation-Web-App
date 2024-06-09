@@ -1,5 +1,4 @@
 function validateRegister(event) {
-
     var name = document.getElementById("name").value;
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
@@ -34,7 +33,6 @@ function validateRegister(event) {
 }
 
 function validateLogin(event) {
-
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
 
@@ -54,3 +52,23 @@ function validateLogin(event) {
     return true;
 }
 
+function showSuccess(event) {
+    var formId = event.target.closest('form').id;
+    var isValid = false;
+
+    if (formId === 'userRegister') {
+        isValid = validateRegister(event);
+    } else if (formId === 'userLogin') {
+        isValid = validateLogin(event);
+    }
+
+    if (isValid) {
+        alert("Submitted!");
+    }
+}
+
+const submitButtons = document.querySelectorAll("button[type=submit]");
+
+submitButtons.forEach(button => {
+    button.addEventListener("click", showSuccess);
+});
