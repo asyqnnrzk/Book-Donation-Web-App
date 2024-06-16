@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <form id="userRegister" action="../php/register.php" method="post" onsubmit="return handleFormSubmit();">
+        <form id="userRegister" action="../php/register.php" method="POST" onsubmit="return handleFormSubmit();">
             <h1>Create an account</h1>
 
             <div class="input-box">
@@ -26,6 +26,10 @@
 
             <div class="input-box">
                 <input id="email" name="admin_email" type="email" placeholder="Email">
+            </div>
+            
+            <div class="input-box">
+                <input id="centre" name="centre_name" type="text" placeholder="Centre name">
             </div>
 
             <button id="submit" type="submit" class="btn">

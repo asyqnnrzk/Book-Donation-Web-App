@@ -113,3 +113,6 @@ body {
     text-decoration: underline;
 }
 
+p {
+    text-align: center;
+}

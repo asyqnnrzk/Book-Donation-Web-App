@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: white;
+}
+  
+header {
+  background-color: #A7C7E7;
+}
+  
+main {
+  background-color: white;
+}
+
+.content {
+    text-align: center;
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    width: 80%; /* Adjust this percentage as needed */
+    max-width: 600px; /* Maximum width for the form */
+}
+
+form input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    font-size: 16px;
+}
+
+form input[type="submit"] {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-radius: 0 4px 4px 0;
+    background-color: #A7C7E7;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    opacity: 1;
+}
+
+form input[type="submit"]:hover {
+    background-color: #A7C7E7;
+}
+
+.info {
+    margin-top: 40px; /* Add margin to ensure table appears below the form */
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: auto; /* Ensure table can be scrolled on small screens */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}

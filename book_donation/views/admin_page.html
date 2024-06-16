@@ -12,10 +12,9 @@
             <div class="navbar">
                 <img src="../img/logo_trans.png" class="logo" alt="Logo">
                 <ul>
-                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="admin_page.html">Home</a></li>
                     <li><a href="register.html">Register</a></li>
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="homepage.html">Logout</a></li>
+                    <li><a href="homepage.html" onclick="return confirm('Are you sure you want to logout?');">Logout</a></li>
                 </ul>
             </div>
         </div>
@@ -25,13 +24,16 @@
             <h1>Welcome Admin</h1>
             <p>Let's get to business!</p>
             <div>
-                <!-- <a href="donated_book.html" class="button-link">
+                <a href="donate.html" class="button-link">
+                    <button type="button">DONATE BOOKS</button>
+                </a>
+                <a href="../php/donated_book.php" class="button-link">
                     <button type="button">BOOKS DONATED</button>
-                </a> -->
-                <a href="sold_book.html" class="button-link">
+                </a>
+                <a href="../php/sold_book.php" class="button-link">
                     <button type="button">BOOKS PURCHASED</button>
                 </a>
-                <a href="report.html" class="button-link">
+                <a href="../php/report.php" class="button-link">
                     <button type="button">REPORT</button>
                 </a>
             </div>

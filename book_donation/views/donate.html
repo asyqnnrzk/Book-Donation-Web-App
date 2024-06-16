@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Book</title>
+    <link rel="stylesheet" href="../css/signup_style.css">
+    <script src="../js/donate.js" defer></script>
+</head>
+<body>
+<main>
+<div class="wrapper">
+        <form id="donate" action="../php/donate.php" method="post" onsubmit="return handleFormSubmit(event);">
+            <h1>Donate books</h1>
+
+            <div class="input-box">
+                <input id="book_name" name="book_name" type="text" placeholder="Book Name">
+            </div>
+
+            <div class="input-box">
+                <input id="author" name="author" type="text" placeholder="Author">
+            </div>
+
+            <div class="input-box">
+                <input id="publisher" name="publisher" type="text" placeholder="Publisher">
+            </div>
+
+            <div class="input-box">
+                <input id="language" name="language" type="text" placeholder="Language">
+            </div>
+            
+            <div class="input-box">
+                <input id="price" name="price" type="number" step="0.01" min="0" placeholder="Price">
+            </div>
+            
+            <div class="input-box">
+                <input id="centre" name="centre" type="text" placeholder="Centre">
+            </div>
+            
+            <div class="input-box">
+                <p>Once submitted cannot be edited or deleted!</p>
+            </div>
+
+            <button id="submit" type="submit" class="btn">
+                DONATE
+            </button>
+
+        </form>
+    </div>
+</main>
+</body>
+</html>

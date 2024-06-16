@@ -5,6 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sold Out Books</title>
     <link rel="stylesheet" href="../css/home_style.css">
+    <script>
+        function deleteBook(bookId) {
+            if (confirm("Are you sure you want to delete this book?")) {
+                // Send AJAX request to delete_book.php
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", "delete_book.php", true);
+                xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        var response = JSON.parse(xhr.responseText);
+                        if (response.success) {
+                            alert("Book deleted successfully!");
+                            // Reload the page or update the table
+                            location.reload(); // Reload the page
+                        } else {
+                            alert("Error: " + response.message);
+                        }
+                    }
+                };
+                xhr.send("book_id=" + bookId);
+            }
+        }
+    </script>
 </head>
 <body>
 <header>
@@ -49,6 +72,7 @@
                     echo "<td>".$row['date_in']."</td>";
                     echo "<td>".$row['date_out']."</td>";
                     echo "<td>".$row['centre_name']."</td>";
+                    echo "<td><button class='delete-button' onclick='deleteBook(".$row['book_id'].")'>Delete</button></td>";
                     echo "</tr>";
                 }
                 echo "</table>";

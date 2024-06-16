@@ -12,7 +12,7 @@
                 <img src="../img/logo_trans.png" class="logo" alt="Logo">
                 <ul>
 					<li><a href="homepage.html">Home</a></li>
-                    <li><a href="aboutus.html">About us</a></li>
+                    <li><a href="../views/aboutus.html">About us</a></li>
                     <li><a href="bookcentre.html">Book Centre</a></li>
 					<li><a href="login.html">Admin</a></li>
                 </ul>
@@ -34,6 +34,34 @@
 					<p>Contact:</p>
 				</th>
 			</tr>
+			<?php
+include("connection.php");
+$sql = "SELECT * FROM book_centre";
+$result = mysqli_query($conn,$sql);
+if (mysqli_num_rows($result) > 0) {
+// output data of each row
+//Fetches a result row as an associative array
+echo "<table border='1'>";
+echo "<tr><th>Username</th><th>Name</th>";
+echo "<th>IC</th><th>Address</th></tr>";
+while($row = mysqli_fetch_assoc($result))
+{
+echo "<tr>"; echo "<td>".$row['centre_id']."</td>";
+echo "<td>".$row['centre_name']."</td>";
+echo "<td>".$row['centre_location']."</td>";
+echo "<td>".$row['centre_contact']."</td>";
+echo "</tr>";
+}
+echo "</table>";
+}
+else {
+ echo "0 results";
+}
+//Freeing all memory associated with it
+mysqli_free_result($result);
+//Closes specified connection
+mysqli_close($conn);
+?>
 		</table>
 	</main>
 	
