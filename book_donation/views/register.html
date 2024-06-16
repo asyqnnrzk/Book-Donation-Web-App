@@ -9,23 +9,23 @@
 </head>
 <body>
     <div class="wrapper">
-        <form id="userRegister" onsubmit="return handleFormSubmit();">
+        <form id="userRegister" action="../php/register.php" method="post" onsubmit="return handleFormSubmit();">
             <h1>Create an account</h1>
 
             <div class="input-box">
-                <input id="name" type="text" placeholder="Name">
+                <input id="name" name="admin_name" type="text" placeholder="Name">
             </div>
 
             <div class="input-box">
-                <input id="username" type="text" placeholder="Username">
+                <input id="username" name="admin_username" type="text" placeholder="Username">
             </div>
 
             <div class="input-box">
-                <input id="password" type="password" placeholder="Password">
+                <input id="password" name="admin_password" type="password" placeholder="Password">
             </div>
 
             <div class="input-box">
-                <input id="email" type="email" placeholder="Email">
+                <input id="email" name="admin_email" type="email" placeholder="Email">
             </div>
 
             <button id="submit" type="submit" class="btn">
